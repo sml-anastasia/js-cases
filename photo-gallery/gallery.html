@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .image {
+            height: 75px;
+            border-radius: 5px;
+            margin: 2px;
+        }
+
+        .full {
+            width: 50%;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function onSelectImage(url) {
+            document.getElementById("mainImage").src = url;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let urls = ["cats/1.jpg", "cats/2.jpg", "cats/3.jpg", "cats/4.jpg", "cats/5.jpg", "cats/2.jpg"];
+
+            let optionsString = "";
+            for (let url of urls) {
+                optionsString += `<img src='${url}' class='image' onclick='onSelectImage("${url}");'>`;
+            }
+            document.getElementById("container").innerHTML = optionsString;
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+    <div>
+        <img src="cats/5.jpg" class="full" id="mainImage">
+    </div>
+
+
+
+</body>
+
+</html>

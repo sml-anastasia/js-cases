@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .image {
+            height: 75px;
+            border-radius: 5px;
+            margin: 2px;
+        }
+
+        .full {
+            width: 50%;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function onSelectImage(sender) {
+            document.getElementById("mainImage").src = sender.src;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <img src="cats/1.jpg" class="image" onclick='onSelectImage(this);'>
+        <img src="cats/2.jpg" class="image" onclick='onSelectImage(this);'>
+        <img src="cats/3.jpg" class="image" onclick='onSelectImage(this);'>
+        <img src="cats/4.jpg" class="image" onclick='onSelectImage(this);'>
+        <img src="cats/5.jpg" class="image" onclick='onSelectImage(this);'>
+    </div>
+    <div>
+        <img src="cats/5.jpg" class="full" id="mainImage">
+    </div>
+
+
+
+</body>
+
+</html>
