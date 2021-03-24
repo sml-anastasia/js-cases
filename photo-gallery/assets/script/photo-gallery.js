@@ -3,32 +3,32 @@ let photoContainer = document.querySelector('.container');
 let foodPhotoJSON = `[
 {
     "title": "soba with eggplants",
-    "img": "eggplant-soba.JPG",
+    "img": "assets/images/eggplant-soba.JPG",
     "alt": "soba with eggplants"
 },
 {
     "title": "mushroon cream-soup",
-    "img": "mushroom-soup.JPG",
+    "img": "assets/images/mushroom-soup.JPG",
     "alt": "mushroon cream-soup"
 },
 {
     "title": "pear, ginger and milk chocolate poundcake",
-    "img": "pear-poundcake.JPG",
+    "img": "assets/images/pear-poundcake.JPG",
     "alt": "pear, ginger and milk chocolate poundcake"
 },
 {
     "title": "potato soup",
-    "img": "potato-soup.JPG",
+    "img": "assets/images/potato-soup.JPG",
     "alt": "potato soup"
 },
 {
     "title": "pumpkin soup",
-    "img": "pumpkin-soup.JPG",
+    "img": "assets/images/pumpkin-soup.JPG",
     "alt": "pumpkin soup"
 },
 {
     "title": "tomato and cheese galette",
-    "img": "tomato-galette.JPG",
+    "img": "assets/images/tomato-galette.JPG",
     "alt": "tomato and cheese galette"
 }
 ]`;
