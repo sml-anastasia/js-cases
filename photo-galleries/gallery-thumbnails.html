@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        .photo {
+            width: auto;
+            height: 300px;
+        }
+
+        .photo-box {
+            margin: 0 20px;
+            /* display: none; */
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Photo Gallery case</h1>
+    <div class="container">
+        <div class="gallery">
+            <div class="photo-box"></div>
+        </div>
+        <button id="next">next</button>
+    </div>
+    <script src="assets/script/gallery-thumbnails.js"></script>
+</body>
+
+</html>
