@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thumbgallery</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #current {
+            width: auto;
+            height: 360px;
+        }
+
+        .imgs {
+            margin: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .imgs img {
+            width: auto;
+            height: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Thumbgallery</h1>
+    <div class="container">
+        <div class="main-img">
+            <img src="assets/images/eggplant-soba.JPG" id="current">
+        </div>
+
+        <div class="imgs">
+            <img class="photo-box_img" src="assets/images/eggplant-soba.JPG" alt="eggplant soba">
+            <img class="photo-box_img" src="assets/images/mushroom-soup.JPG" alt="mushroom soup">
+            <img class="photo-box_img" src="assets/images/pear-poundcake.JPG" alt="pear poundcake">
+            <img class="photo-box_img" src="assets/images/potato-soup.JPG" alt="potato soup">
+            <img class="photo-box_img" src="assets/images/pumpkin-soup.JPG" alt="pumpkin soup">
+            <img class="photo-box_img" src="assets/images/tomato-galette.JPG" alt="tomato galette">
+        </div>
+    </div>
+    <script src="assets/script/thumbgallery.js"></script>
+</body>
+
+</html>

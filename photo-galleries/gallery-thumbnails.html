@@ -7,19 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery</title>
     <style>
-        .photo {
+        * {
+            box-sizing: border-box;
+        }
+
+        .photo-box_img {
             width: auto;
-            height: 300px;
+            height: 180px;
         }
 
         .photo-box {
             margin: 0 20px;
-            /* display: none; */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
         }
 
         .gallery {
             display: flex;
             flex-direction: row;
+        }
+
+        #main-photo {
+            width: auto;
+            height: 360px;
         }
     </style>
 </head>
@@ -28,9 +38,24 @@
     <h1>Photo Gallery case</h1>
     <div class="container">
         <div class="gallery">
-            <div class="photo-box"></div>
+            <div class="photo-box">
+                <img class="photo-box_img" src="assets/images/eggplant-soba.JPG" alt="eggplant soba"
+                    onclick="onSelectImage(this);">
+                <img class="photo-box_img" src="assets/images/mushroom-soup.JPG" alt="mushroom soup"
+                    onclick="onSelectImage(this);">
+                <img class="photo-box_img" src="assets/images/pear-poundcake.JPG" alt="pear poundcake"
+                    onclick="onSelectImage(this);">
+                <img class="photo-box_img" src="assets/images/potato-soup.JPG" alt="potato soup"
+                    onclick="onSelectImage(this);">
+                <img class="photo-box_img" src="assets/images/pumpkin-soup.JPG" alt="pumpkin soup"
+                    onclick="onSelectImage(this);">
+                <img class="photo-box_img" src="assets/images/tomato-galette.JPG" alt="tomato galette"
+                    onclick="onSelectImage(this);">
+            </div>
+            <div class="main-photo-box">
+                <img id="main-photo" src="" alt="">
+            </div>
         </div>
-        <button id="next">next</button>
     </div>
     <script src="assets/script/gallery-thumbnails.js"></script>
 </body>

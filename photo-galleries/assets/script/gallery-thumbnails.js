@@ -1,108 +1,76 @@
-// PHOTO GALLERY
-let foodPhotoJSON = `[
-{
-    "title": "soba with eggplants",
-    "img": "assets/images/eggplant-soba.JPG",
-    "alt": "soba with eggplants"
-},
-{
-    "title": "mushroon cream-soup",
-    "img": "assets/images/mushroom-soup.JPG",
-    "alt": "mushroon cream-soup"
-},
-{
-    "title": "pear, ginger and milk chocolate poundcake",
-    "img": "assets/images/pear-poundcake.JPG",
-    "alt": "pear, ginger and milk chocolate poundcake"
-},
-{
-    "title": "potato soup",
-    "img": "assets/images/potato-soup.JPG",
-    "alt": "potato soup"
-},
-{
-    "title": "pumpkin soup",
-    "img": "assets/images/pumpkin-soup.JPG",
-    "alt": "pumpkin soup"
-},
-{
-    "title": "tomato and cheese galette",
-    "img": "assets/images/tomato-galette.JPG",
-    "alt": "tomato and cheese galette"
-}
-]`;
+// GALLERY WITH THUMBNAILS
 
-let photoGallery = document.querySelector('.gallery');
-let currentPhoto = document.querySelector('.photo');
-let photoBox = document.querySelector('.photo-box');
-let nextBtn = document.querySelector('#next');
-let foodPhotos;
-let foodPics = [];
-
-document.addEventListener("DOMContentLoaded", function(event) {
-    if (localStorage.getItem("food-photos")) {
-        foodPhotos = JSON.parse(localStorage.getItem("food-photos"));
-    } else {
-        foodPhotos = JSON.parse(foodPhotoJSON);
-    }
-    for (let i = 0; i < foodPhotos.length; i++) {
-        foodPics.push(foodPhotos[i].img);
-    }
-    console.log(foodPhotos);
-    console.log(foodPics);
-    // appendPhoto();
-});
-
-function onSelectImage(url) {
-    document.getElementById("mainImage").src = url;
+function onSelectImage(sender) {
+    document.getElementById("main-photo").src = sender.src;
 }
 
-nextBtn.addEventListener('click', changePhoto);
 
-function changePhoto(event) {
-    let foodPhoto = document.createElement('img');
-    foodPhoto.setAttribute('class', 'photo');
-    let photoTitle = document.createElement('p');
-    photoTitle.setAttribute('class', 'photo-title');
+// let foodPhotoJSON = `[
+// {
+//     "title": "soba with eggplants",
+//     "img": "assets/images/eggplant-soba.JPG",
+//     "alt": "soba with eggplants"
+// },
+// {
+//     "title": "mushroon cream-soup",
+//     "img": "assets/images/mushroom-soup.JPG",
+//     "alt": "mushroon cream-soup"
+// },
+// {
+//     "title": "pear, ginger and milk chocolate poundcake",
+//     "img": "assets/images/pear-poundcake.JPG",
+//     "alt": "pear, ginger and milk chocolate poundcake"
+// },
+// {
+//     "title": "potato soup",
+//     "img": "assets/images/potato-soup.JPG",
+//     "alt": "potato soup"
+// },
+// {
+//     "title": "pumpkin soup",
+//     "img": "assets/images/pumpkin-soup.JPG",
+//     "alt": "pumpkin soup"
+// },
+// {
+//     "title": "tomato and cheese galette",
+//     "img": "assets/images/tomato-galette.JPG",
+//     "alt": "tomato and cheese galette"
+// }
+// ]`;
 
-    photoBox.appendChild(foodPhoto);
-    photoBox.appendChild(photoTitle);
-    photoGallery.appendChild(photoBox);
+// const photoBox = document.querySelector('.photo-box');
+// let foodPhotos = JSON.parse(foodPhotoJSON);
 
-    for (let i = 0; i<foodPhotos.length; i++) {
-        foodPhoto.setAttribute('src', foodPhotos[i].img);
-        foodPhoto.setAttribute('alt', foodPhotos[i].alt);
-        photoTitle.innerText = foodPhotos[i].title;
-    }
-    localStorage.setItem("food-photos", JSON.stringify(foodPhotos));
-}
+// document.addEventListener("DOMContentLoaded", function (event) {
+//     if (localStorage.getItem("food-photos")) {
+//         foodPhotos = JSON.parse(localStorage.getItem("food-photos"));
+//     } else {
+//         foodPhotos = JSON.parse(foodPhotoJSON);
+//     }
+//     appendPhoto();
+//     console.log('test');
+// });
 
 // function appendPhoto() {
-//     let photoBox = document.createElement('div');
-//     photoBox.setAttribute('class', 'photo-box');
-
-//     foodPhoto = document.createElement('img');
+//     let foodPhoto = document.createElement('img');
 //     foodPhoto.setAttribute('class', 'photo');
-//     foodPhoto.setAttribute('src', foodPhotos[0].img);
-//     foodPhoto.setAttribute('alt', foodPhotos[0].alt);
-
 //     let photoTitle = document.createElement('p');
 //     photoTitle.setAttribute('class', 'photo-title');
-//     photoTitle.innerText = foodPhotos[0].title;
 
-//     photoBox.appendChild(foodPhoto);
-//     photoBox.appendChild(photoTitle);
-//     photoGallery.appendChild(photoBox);
+//     foodPhotos.map(photo =>{
+//         for(i = 0; i<foodPhotos.length; i++) {
+//             foodPhoto.setAttribute('src', photo[i].img);
+//             foodPhoto.setAttribute('alt', photo[i].alt);
+//             photoTitle.innerText = photo[i].title;
 
-//     localStorage.setItem("food-photos", JSON.stringify(foodPhotos));
+//             photoBox.appendChild(foodPhoto);
+//             photoBox.appendChild(photoTitle);
+
+//             localStorage.setItem("food-photos", JSON.stringify(foodPhotos));
+//         }
+//     })
 // }
 
-
-
-// function showNextPhoto() {
-//     let nextPhoto = document.querySelector('.photo');
-//     for (let i = 0; i < foodPics; i++) {
-//         nextPhoto.src = foodPics[i];
-//         nextPhoto.style.display = block;
-//     }
+// function onSelectImage(sender) {
+//     document.getElementById("main-photo").src = sender.src;
 // }
