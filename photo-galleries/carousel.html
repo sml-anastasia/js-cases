@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .photo-box_img {
+            width: auto;
+            height: 180px;
+        }
+
+        .photo-box {
+            margin: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #main-photo {
+            width: auto;
+            height: 360px;
+        }
+
+        #btn-left,
+        #btn-right {
+            width: 70px;
+            height: 20px;
+        }
+
+        .image {
+            width: auto;
+            height: 360px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Photo Gallery case</h1>
+    <div class="container">
+        <div class="gallery">
+            <div class="photo-box">
+                <!-- <button id="btn-left" onclick="changePrevPhoto();">previos</button> -->
+                <!-- <button id="btn-right" onclick="changeNextPhoto()">next</button> -->
+            </div>
+            <div>
+                <img id="main-photo" src="assets/images/eggplant-soba.JPG" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="assets/script/carousel.js"></script>
+</body>
+
+</html>
