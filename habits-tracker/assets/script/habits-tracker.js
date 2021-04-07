@@ -44,9 +44,36 @@ allHabits.map(habit => {
         habitCheck.setAttribute("name",`checkbox-${habit.name}`);
         habitForm.appendChild(habitCheck);
     }
+    let habitDelete = document.createElement('img');
+    habitDelete.src = 'assets/images/icon-delete.svg';
+    habitDelete.classList.add('habit-delete');
+
     habitItem.appendChild(habitTitle);
     habitItem.appendChild(habitForm);
+    habitItem.appendChild(habitDelete);
     habitBox.appendChild(habitItem);
+
+    getDeleteButtons();
     localStorage.setItem('habits', JSON.stringify(allHabits));
     });
+}
+
+function getDeleteButtons() {
+    habitDeleteButtons = Array.from(document.querySelectorAll('.habit-delete'));
+    habitDeleteButtons.forEach(button => {
+        let habitToDelete = button.previousSibling.previousSibling.innerText;
+        button.addEventListener('click', () => {
+            deleteHabit(habitToDelete);
+        })
+    })
+}
+
+function deleteHabit(habitToDelete) {
+    for(let i = 0; i < allHabits.length; i++) {
+        if(allHabits[i].name == habitToDelete) {
+            allHabits.splice(i, 1);
+        }
+    }
+    localStorage.setItem('habits', JSON.stringify(allHabits));
+    appendHabit();
 }
