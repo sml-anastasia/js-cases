@@ -11,20 +11,19 @@
             box-sizing: border-box;
         }
 
-        .photo-box_img {
-            width: auto;
-            height: 180px;
-        }
-
-        .photo-box {
-            margin: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .gallery {
+            width: 500px;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         #food-img {
@@ -33,17 +32,37 @@
         }
 
         #food-title {
+            width: 100%;
+            height: 100%;
+            margin-top: 10%;
+            margin-bottom: 0;
             font-size: 24px;
+            text-transform: uppercase;
         }
 
         #food-text {
+            margin-bottom: 0;
             font-size: 16px;
         }
 
         .btn-prev,
         .btn-next {
-            width: 70px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+            padding: 0;
+            border: none;
+            border-radius: 30px;
+            background-color: transparent;
+        }
+
+        .btn-prev {
+            margin-left: auto;
+            transform: rotate(180deg);
+        }
+
+        .btn-next {
+            margin-right: auto;
         }
 
         .image {
@@ -54,19 +73,23 @@
 </head>
 
 <body>
-    <h1>Photo Gallery case</h1>
+    <h1>Photo Gallery with Arrows</h1>
     <div class="container">
-        <div class="gallery">
-            <div>
-                <img id="food-img" src="assets/images/eggplant-soba.JPG" alt="">
-                <p id="food-title">soba with eggplants</p>
-                <p id="food-text">soba with eggplants</p>
-            </div>
-            <div class="buttons">
-                <button class="btn-prev">previos</button>
-                <button class="btn-next">next</button>
-            </div>
+        <div class="buttons">
+            <button class="btn-prev">
+                <img src="assets/images/icon-arrow.svg" alt="">
+            </button>
+            <button class="btn-next">
+                <img src="assets/images/icon-arrow.svg" alt="">
+            </button>
         </div>
+        <div class="gallery">
+            <img id="food-img" src="assets/images/eggplant-soba.JPG" alt="">
+            <p id="food-title">soba with eggplants</p>
+            <p id="food-text">soba with eggplants</p>
+        </div>
+
+
     </div>
     <script src="assets/script/carousel.js"></script>
 </body>

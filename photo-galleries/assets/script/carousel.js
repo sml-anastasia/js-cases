@@ -4,19 +4,19 @@ let foodPhotos = [
     title: "soba with eggplants",
     img: "assets/images/eggplant-soba.JPG",
     alt: "soba with eggplants",
-    text: "soba with eggplants"
+    text: "Asian style soba with eggplants, stewed with soy sauce and asian spices."
 },
 {
     title: "mushroon cream-soup",
     img: "assets/images/mushroom-soup.JPG",
-    alt: "mushroon cream-soup",
-    text: "mushroon cream-soup"
+    alt: "mushroom cream-soup",
+    text: "Smooth and tasty soup without dairy. Good for vegan lunch."
 },
 {
     title: "pear, ginger and milk chocolate poundcake",
     img: "assets/images/pear-poundcake.JPG",
     alt: "pear, ginger and milk chocolate poundcake",
-    text: "pear, ginger and milk chocolate poundcake"
+    text: "Warm poundcake with gentle pears, milk chocolate and spicy ginger. Perfect for fall picnic."
 },
 {
     title: "potato soup",
