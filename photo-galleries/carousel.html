@@ -27,13 +27,21 @@
             flex-direction: row;
         }
 
-        #main-photo {
+        #food-img {
             width: auto;
             height: 360px;
         }
 
-        #btn-left,
-        #btn-right {
+        #food-title {
+            font-size: 24px;
+        }
+
+        #food-text {
+            font-size: 16px;
+        }
+
+        .btn-prev,
+        .btn-next {
             width: 70px;
             height: 20px;
         }
@@ -49,12 +57,14 @@
     <h1>Photo Gallery case</h1>
     <div class="container">
         <div class="gallery">
-            <div class="photo-box">
-                <!-- <button id="btn-left" onclick="changePrevPhoto();">previos</button> -->
-                <!-- <button id="btn-right" onclick="changeNextPhoto()">next</button> -->
-            </div>
             <div>
-                <img id="main-photo" src="assets/images/eggplant-soba.JPG" alt="">
+                <img id="food-img" src="assets/images/eggplant-soba.JPG" alt="">
+                <p id="food-title">soba with eggplants</p>
+                <p id="food-text">soba with eggplants</p>
+            </div>
+            <div class="buttons">
+                <button class="btn-prev">previos</button>
+                <button class="btn-next">next</button>
             </div>
         </div>
     </div>
