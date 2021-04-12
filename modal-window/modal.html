@@ -6,10 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal Window</title>
+
+    <style>
+        body {
+            background-color: wheat;
+        }
+
+        .hero {
+            width: 400px;
+            background-color: white;
+        }
+
+        .modal-overlay {
+            width: 400px;
+            margin: auto;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            z-index: -10;
+        }
+
+        .open-modal {
+            visibility: visible;
+            z-index: 10;
+        }
+    </style>
 </head>
 
 <body>
-
+    <h1>Modal Window</h1>
+    <section class="hero">
+        <div class="banner">
+            <h2>Our new collection</h2>
+            <button class="modal-btn">learn more</button>
+        </div>
+    </section>
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <h3>content</h3>
+            <button class="close-btn">x</button>
+        </div>
+    </div>
     <script src="modal.js"></script>
 </body>
 
