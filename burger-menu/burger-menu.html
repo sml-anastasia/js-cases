@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Menu</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        a:hover {
+            color: #ff0000;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: darkslategrey;
+            width: 100vw;
+            height: 100vh;
+            color: white;
+            display: none;
+        }
+
+        .navbar ul {
+            list-style: none;
+        }
+
+        .menu-btn {
+            position: absolute;
+            z-index: 1000;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+            background-size: 100%;
+        }
+
+        .menu-btn img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .showClose {
+            background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+        }
+
+        .showNav {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="menu-btn" onclick="toggleBurger();"></button>
+    <nav class="navbar">
+        <ul>
+            <li><a class="menuLink" href="#">Home</a></li>
+            <li><a class="menuLink" href="#">Profile</a></li>
+            <li><a class="menuLink" href="#">About</a></li>
+            <li><a class="menuLink" href="#">Contacts</a></li>
+        </ul>
+    </nav>
+    <script src="burger-menu.js"></script>
+</body>
+
+</html>
