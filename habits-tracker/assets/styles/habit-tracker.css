@@ -1,0 +1,6 @@
+.habit-form {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

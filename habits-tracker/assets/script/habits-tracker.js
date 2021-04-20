@@ -1,5 +1,6 @@
 let habitBox = document.querySelector("#habit-box");
 let habitName = document.querySelector('#habit-name');
+let habitDuration = document.querySelector('#habit-duration');
 let allHabits = [];
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -15,9 +16,11 @@ function addHabit() {
         return alert("Please enter your habit");
     } else {
         newHabit.name = habitName.value;
+        newHabit.duration = habitDuration.value;
     }
     allHabits.push(newHabit);
     habitName.value = '';
+    habitDuration.value = '';
     appendHabit();
 }
 
@@ -38,9 +41,10 @@ allHabits.map(habit => {
     let habitForm = document.createElement('form');
     habitForm.classList = 'habit-form';
     let habitCheck;
-    for (i=0; i<21; i++){
+    for (i=0; i<habit.duration; i++){
         habitCheck = document.createElement('input');
         habitCheck.setAttribute("type", "checkbox");
+        habitCheck.setAttribute("class", "habit-check");
         habitCheck.setAttribute("name",`checkbox-${habit.name}`);
         habitForm.appendChild(habitCheck);
     }
