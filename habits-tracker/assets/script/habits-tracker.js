@@ -17,6 +17,7 @@ function addHabit() {
     } else {
         newHabit.name = habitName.value;
         newHabit.duration = habitDuration.value;
+        // массив длиной в duration, заполнить false 
     }
     allHabits.push(newHabit);
     habitName.value = '';
@@ -46,6 +47,9 @@ allHabits.map(habit => {
         habitCheck.setAttribute("type", "checkbox");
         habitCheck.setAttribute("class", "habit-check");
         habitCheck.setAttribute("name",`checkbox-${habit.name}`);
+        // id
+        // setAttribute checked, берется из массива, проверка true/false
+        // habitCheck.onchange = function, находит в массиве, какая галочка поменялась, меняет и записывает
         habitForm.appendChild(habitCheck);
     }
     let habitDelete = document.createElement('img');

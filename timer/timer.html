@@ -7,11 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
     <style>
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .deadline {
+            display: flex;
+            justify-content: center;
+        }
+
         .deadline-format {
-            width: 60px;
-            height: 60px;
-            background-color: cadetblue;
+            width: 80px;
+            height: 80px;
+            background-color: rgb(102, 128, 145);
+            text-align: center;
             color: white;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .value {
+            margin: 0;
+        }
+
+        .number {
+            margin: 0;
+            font-size: 2.5rem;
         }
     </style>
 </head>
@@ -19,32 +45,30 @@
 <body>
     <section class="container">
         <div class="info">
-            <h2>gift box giveaway</h2>
-            <h3 class="giveaway"></h3>
-            <p>some text some text some text some text some text some text some text </p>
+            <h3 class="some-event"></h3>
             <div class="deadline">
                 <div class="deadline-format">
                     <div>
-                        <h4 class="days">4</h4>
-                        <span>days</span>
+                        <h4 class="days number">4</h4>
+                        <span class="value">days</span>
                     </div>
                 </div>
                 <div class="deadline-format">
                     <div>
-                        <h4 class="hours">4</h4>
-                        <span>hours</span>
+                        <h4 class="hours number">4</h4>
+                        <span class="value">hours</span>
                     </div>
                 </div>
                 <div class="deadline-format">
                     <div>
-                        <h4 class="minutes">4</h4>
-                        <span>mins</span>
+                        <h4 class="minutes number">4</h4>
+                        <span class="value">mins</span>
                     </div>
                 </div>
                 <div class="deadline-format">
                     <div>
-                        <h4 class="seconds">4</h4>
-                        <span>secs</span>
+                        <h4 class="seconds number">4</h4>
+                        <span class="value">secs</span>
                     </div>
                 </div>
             </div>
