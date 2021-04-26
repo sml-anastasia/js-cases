@@ -16,7 +16,7 @@ function addHabit() {
         return alert("Please enter your habit");
     } else {
         newHabit.name = habitName.value;
-        newHabit.duration = habitDuration.value;
+        newHabit.duration = Number(habitDuration.value);
         // массив длиной в duration, заполнить false 
     }
     allHabits.push(newHabit);

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .about-img img {
+            width: 180px;
+            height: auto;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .tab-btn.active {
+            background: white;
+        }
+
+        .content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TABS</h1>
+    <section class="container">
+        <div class="title">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent varius lorem et magna pharetra
+                aliquet.</p>
+        </div>
+        <div class="about-center">
+            <article class="about-img">
+                <img src="image.JPG" alt="">
+            </article>
+            <article class="about">
+                <div class="btn-container">
+                    <button class="btn active" data-id="history">history</button>
+                    <button class="btn" data-id="vision">vision</button>
+                    <button class="btn" data-id="goals">goals</button>
+                </div>
+                <article class="about-content">
+                    <div class="content active" id="history">
+                        <h3>history</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent varius lorem et magna
+                            pharetra
+                            aliquet. Proin pulvinar nec orci non imperdiet. Fusce nec purus sed sapien euismod eleifend
+                            sit
+                            amet
+                            nec libero. Aliquam quis semper tellus. Nulla bibendum erat vel massa sodales, vitae
+                            sagittis
+                            ipsum
+                            tempus. Cras sollicitudin pretium risus sit amet mattis. Donec eleifend bibendum augue, eu
+                            semper
+                            urna ornare a. Aliquam mauris urna, fermentum non dictum et, efficitur quis lacus.
+                            Vestibulum
+                            elementum sem a libero tincidunt, sed vehicula leo viverra.</p>
+                    </div>
+                    <div class="content" id="vision">
+                        <h3>vision</h3>
+                        <p>Donec id aliquam nunc, sed lacinia lorem. Nam nec feugiat felis. Donec sem nulla, congue
+                            placerat
+                            luctus vel, fringilla ut purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus
+                            at gravida massa. Suspendisse tellus neque, pellentesque sit amet purus ut, aliquam pharetra
+                            massa.
+                            Vestibulum tincidunt suscipit pellentesque. Pellentesque pharetra convallis rutrum. Duis
+                            euismod
+                            ornare tempus. Aenean mollis sapien arcu, sed commodo ex imperdiet non.</p>
+                    </div>
+                    <div class="content" id="goals">
+                        <h3>goals</h3>
+                        <p>Cras convallis, tellus in imperdiet varius, tellus elit finibus turpis, a semper lacus odio
+                            vel
+                            quam. Quisque eleifend, odio non sodales commodo, turpis lectus finibus dui, eu fermentum
+                            libero
+                            sem
+                            vel turpis. Fusce quis dolor suscipit, lacinia est in, faucibus risus. Phasellus vulputate
+                            lacinia
+                            neque, sit amet eleifend elit varius ac. Aenean bibendum, lectus eu ultrices laoreet, justo
+                            lacus
+                            bibendum ex, in ornare est risus aliquam nulla.</p>
+                    </div>
+                </article>
+            </article>
+
+        </div>
+    </section>
+    <script src="tabs.js"></script>
+</body>
+
+</html>
