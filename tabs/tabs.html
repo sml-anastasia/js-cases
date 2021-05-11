@@ -12,8 +12,13 @@
             box-sizing: border-box;
         }
 
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
         .about-img img {
-            width: 180px;
+            width: 200px;
             height: auto;
         }
 
@@ -21,12 +26,41 @@
             display: none;
         }
 
-        .tab-btn.active {
-            background: white;
+        .btn:hover {
+            background: cadetblue;
+        }
+
+        .btn.active {
+            background: cadetblue;
         }
 
         .content.active {
             display: block;
+        }
+
+        .about-center {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .about {
+            width: 30rem;
+            margin: 0 2%;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .btn {
+            width: 30%;
+            height: 3rem;
+            margin: 0;
+            border: 0.5px solid cadetblue;
+            background-color: transparent;
+            text-transform: uppercase;
+            text-align: start;
         }
     </style>
 </head>
